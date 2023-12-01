@@ -77,4 +77,25 @@ const updateUserByToken = async (req, res) => {
     }
 };
 
-module.exports = { getUserByToken, updateUserByToken };
+const getAllUserByRoleUser = async (req, res) => {
+    try {
+        const dataUser = await User.findAll({
+            where: {
+                role: 0,
+            },
+        });
+
+        return res.status(200).json({
+            status: 200,
+            message: "Data user",
+            data: dataUser,
+        });
+    } catch (error) {
+        return res.status(500).json({
+            status: 500,
+            message: "Kesalahan server internal selama ambil data user",
+        });
+    }
+};
+
+module.exports = { getUserByToken, updateUserByToken, getAllUserByRoleUser };

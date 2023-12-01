@@ -12,7 +12,7 @@ const getAllDaftarKelas = async (req, res) => {
         }
 
         const dataKelas = await Transaksi.findAll({
-            where: { id_user: id },
+            where: { id_user: id, status: 1 },
             include: [{ model: Kelas, as: "kelas" }],
         });
 

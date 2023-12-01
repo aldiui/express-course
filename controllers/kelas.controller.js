@@ -43,7 +43,7 @@ const getKelasById = async (req, res) => {
 const createKelas = async (req, res) => {
     try {
         const { id_kategori, nama_kelas, deskripsi, harga, nama_pengajar, detail_pengajar, durasi, rating, gambar, video } = req.body;
-        if (!id_kategori || !nama_kelas || !deskripsi || !harga || !nama_pengajar || !detail_pengajar || !durasi || !rating || !gambar || !video) {
+        if (!id_kategori || !nama_kelas || !deskripsi || !harga || !nama_pengajar || !detail_pengajar || !durasi || !gambar || !video) {
             return res.status(400).json({
                 status: 400,
                 message: "Data harus diisi",
@@ -67,7 +67,7 @@ const createKelas = async (req, res) => {
 const updateKelas = async (req, res) => {
     try {
         const { id_kategori, nama_kelas, deskripsi, harga, nama_pengajar, detail_pengajar, durasi, rating, gambar, video } = req.body;
-        if (!id_kategori || !nama_kelas || !deskripsi || !harga || !nama_pengajar || !detail_pengajar || !durasi || !rating || !gambar || !video) {
+        if (!id_kategori || !nama_kelas || !deskripsi || !harga || !nama_pengajar || !detail_pengajar || !durasi || !gambar || !video) {
             return res.status(400).json({
                 status: 400,
                 message: "Data harus diisi",

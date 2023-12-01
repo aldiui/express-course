@@ -98,7 +98,7 @@ const updateTransaksi = async (req, res) => {
         }
 
         await Transaksi.update(
-            { tanggal_transaksi: new Date(), status: 1 },
+            { tanggal_pendaftaran: new Date(), status: 1 },
             {
                 where: {
                     id: req.params.id,
